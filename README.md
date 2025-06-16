@@ -1,7 +1,7 @@
-# @hypecode-tech/graphql-ip
+# graphql-ip
 
-[![npm version](https://img.shields.io/npm/v/@hypecode-tech/graphql-ip.svg)](https://www.npmjs.com/package/@hypecode-tech/graphql-ip)
-[![npm downloads](https://img.shields.io/npm/dm/@hypecode-tech/graphql-ip.svg)](https://www.npmjs.com/package/@hypecode-tech/graphql-ip)
+[![npm version](https://img.shields.io/npm/v/graphql-ip.svg)](https://www.npmjs.com/package/graphql-ip)
+[![npm downloads](https://img.shields.io/npm/dm/graphql-ip.svg)](https://www.npmjs.com/package/graphql-ip)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Seamlessly inject client IP address into your GraphQL resolvers with full TypeScript support.
@@ -18,25 +18,25 @@ Seamlessly inject client IP address into your GraphQL resolvers with full TypeSc
 ## Installation
 
 ```bash
-npm install @hypecode-tech/graphql-ip
+npm install graphql-ip
 ```
 
 ```bash
-yarn add @hypecode-tech/graphql-ip
+yarn add graphql-ip
 ```
 
 ```bash
-pnpm add @hypecode-tech/graphql-ip
+pnpm add graphql-ip
 ```
 
 ```bash
-bun add @hypecode-tech/graphql-ip
+bun add graphql-ip
 ```
 
 ## Quick Start
 
 ```typescript
-import { useGraphQLIp } from '@hypecode-tech/graphql-ip'
+import { useGraphQLIp } from 'graphql-ip'
 import { envelop } from '@envelop/core'
 
 const getEnveloped = envelop({
@@ -52,7 +52,7 @@ const getEnveloped = envelop({
 ### Basic Setup
 
 ```typescript
-import { useGraphQLIp } from '@hypecode-tech/graphql-ip'
+import { useGraphQLIp } from 'graphql-ip'
 import { envelop } from '@envelop/core'
 
 const getEnveloped = envelop({
@@ -91,7 +91,7 @@ useGraphQLIp(false) // Strict IP detection without fallbacks
 
 ```typescript
 import { createYoga } from 'graphql-yoga'
-import { useGraphQLIp } from '@hypecode-tech/graphql-ip'
+import { useGraphQLIp } from 'graphql-ip'
 
 const yoga = createYoga({
   plugins: [
@@ -105,7 +105,7 @@ const yoga = createYoga({
 ```typescript
 import { ApolloServer } from '@apollo/server'
 import { envelop, useApolloTracing } from '@envelop/core'
-import { useGraphQLIp } from '@hypecode-tech/graphql-ip'
+import { useGraphQLIp } from 'graphql-ip'
 
 const getEnveloped = envelop({
   plugins: [
@@ -146,7 +146,7 @@ The plugin checks for IP addresses in the following order of priority:
 The plugin provides full TypeScript support with proper type definitions:
 
 ```typescript
-import type { GraphQLContextWithIp } from '@hypecode-tech/graphql-ip'
+import type { GraphQLContextWithIp } from 'graphql-ip'
 
 // Your context will automatically include the 'ip' property
 const resolver = (parent, args, context: GraphQLContextWithIp) => {
