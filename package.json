@@ -1,5 +1,5 @@
 {
-  "name": "@hypecode-tech/graphql-ip",
+  "name": "graphql-ip",
   "version": "1.0.0",
   "description": "Seamlessly inject client IP address into your GraphQL resolvers with full TypeScript support.",
   "keywords": [
@@ -85,5 +85,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "graphql-yoga": "^5.13.5"
   }
 }

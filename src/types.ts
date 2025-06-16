@@ -1,5 +1,7 @@
+import type { YogaInitialContext } from "graphql-yoga"
+
 // Type definitions for GraphQL context extension
-export type GraphQLContextWithIp = {
+export type GraphQLContextWithIp = YogaInitialContext & {
   ip: string
 }
 

@@ -1,5 +1,5 @@
 import { type Plugin } from '@envelop/core'
-
+import { type YogaInitialContext } from 'graphql-yoga'
 // Type definitions for the context
 interface RequestLike {
   headers: Headers | Record<string, string | string[] | undefined>
@@ -18,7 +18,7 @@ interface ContextWithRequest {
 }
 
 // Export types for external use
-export interface GraphQLContextWithIp {
+export type GraphQLContextWithIp = YogaInitialContext & {
   ip: string
 }
 
