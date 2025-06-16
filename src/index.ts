@@ -73,11 +73,11 @@ function extractIpFromRequest(request: RequestLike): string {
 export const useGraphQLIp = (isLocal: boolean = false): Plugin => {
   return {
     onExecute({ context, extendContext }) {
-      const typedContext = context as ContextWithRequest
+      const request = (context as any).request;
       let clientIp = 'unknown'
 
-      if (typedContext.request) {
-        clientIp = extractIpFromRequest(typedContext.request)
+      if (request) {
+        clientIp = extractIpFromRequest(request)
       }
 
       // For local development, we might want to use a default local IP
