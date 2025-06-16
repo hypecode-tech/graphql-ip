@@ -1,0 +1,41 @@
+# Source files
+src/
+tests/
+
+# Build configuration
+tsconfig.json
+tsup.config.ts
+.eslintrc.json
+
+# Development files
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Bun
+bun.lock
+
+# Git
+.git/
+.gitignore
